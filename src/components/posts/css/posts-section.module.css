@@ -1,0 +1,18 @@
+
+.blogPosts {
+    width: 60%;
+    max-width: 600px;
+    color: var(--text-color);
+  }
+  
+  
+  /* ------Blog post style and animation------*/
+.searchBarContainer {
+  margin: 10px;
+  display: flex;
+  justify-content: right;
+}
+
+.searchBar {
+  padding: 6px;
+}
