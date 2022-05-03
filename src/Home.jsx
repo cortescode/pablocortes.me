@@ -1,6 +1,6 @@
 import React from "react";
 
-import projectDetail from "./components/portfolio/portfolio-slider.jsx";
+import PortfolioSlider from "./components/portfolio/portfolio-slider.jsx";
 import Header from "./components/headers/header.jsx";
 import "./App.css";
 
@@ -13,13 +13,12 @@ function Home() {
                 image='assets/eth-on-hand.png'>    
             </Header>
             <main>
+                <h2>And... ¿Who is Pablo Cortés?</h2>
                 <section className="info">
-                    
                     <div>
                         <img src="assets/blockchain.png" alt="" />
                     </div>
                     <div>
-                        <h2>And... ¿Who is Pablo Cortés?</h2>
                         <p>
                             I consider myself as an autodidact programmer passionated by the future of web and finance,
                             voracious reader and entrepreneur.
@@ -35,20 +34,13 @@ function Home() {
                             Currently I am managing <a href="https://www.bleckin.com">Bleckin</a>, where I try to bring blockchain use and knowledge to Spanish speakers,
                             I am preparing a lot of interesting stuff (related to Web3) that will be launched in coming months.
                             <br/><br/>
-                            I don't know in what will I be interested in future, but there is something what follow me in all my projects: don't stop learning 
-                            and try to make products or services which improve the world.
+                            I don't know in what will I be interested in future, but there is something what follow me in all my life: don't stop learning 
+                            and trying to make products or services that improve the world.
                         </p>
                     </div>
                 </section>
-                <section className="portfolio">
-                    <h2>Portfolio</h2>
-                    <div className="projectSlider">
-                        <div className="project"></div>
-                        <div className="selectedProject"></div>
-                        <div className="project"></div>
-                    </div>
-
-                </section>
+                <h2>Portfolio</h2>
+                <PortfolioSlider></PortfolioSlider>
             </main>
         </section>
     );

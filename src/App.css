@@ -1,11 +1,9 @@
 :root {
-  --backgroud-color: #141414;
-  --elements-color: #3D3A50;
-  --title-color: white;
-  --decorations-color: #0EA2F6;
-  --text-color: #F4FCFE;
-  --links-color: #AD8B4E;
-  background-color: var(--backgroud-color);
+  --black-color: #141414;
+  --gray-color: #565656;
+  --light-gray-color: #9E9E9E;
+  --yellow-color: #FBA92C;
+  background-color: var(--black-color);
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -28,19 +26,22 @@ main {
   color: #F4FCFE;
   line-height: 1.4em;
   font-size: 16px;
+  margin: 80px auto 80px auto;
+  max-width: 1000px;
 }
 
 main h2 {
   font: 39.06px Rubik Glitch;
+  text-align: center;
   line-height: 1.2em;
   color:#FBA92C;
+  margin-top: 100px;
 }
 
 .info {
   display: flex;
   justify-content: center;
-  margin: 80px auto 80px auto;
-  max-width: 900px;
+  
 }
 .info div {
   margin: 20px;
@@ -50,10 +51,4 @@ main h2 {
 }
 .info div img {
   max-width: 380px;
-}
-
-
-.portfolio {
-  display: flex;
-  justify-content: center;
 }
