@@ -2,26 +2,15 @@ import React, {useEffect, useState} from "react";
 import Style from "./css/posts-section.module.css";
 import PostAbstraction from "./post-abstraction.jsx";
 
-import app from "../../firebase.js";
-import { getFirestore, collection, getDocs} from "firebase/firestore";
+import {getAllPosts} from "../../firebase.js";
 
 function PostsSection(props) {
 
     const [postsShown, setPosts] = useState([]);
 
-    const db = getFirestore(app);
-
-    //Get blog posts from the firestore database
-    useEffect( () => {
-        const getAllPosts = async () => {
-            const postsCollection = collection(db, 'Blog-posts');
-            const postsSnapshot = await getDocs(postsCollection, 'Posts');
-            const postsList = postsSnapshot.docs.map( (doc) => ({...doc.data(), id: doc.id}));
-            setPosts(postsList);
-            return postsList;
-        }
-        getAllPosts();
-    });
+    useEffect( ()=>{
+        getAllPosts().then((postsList)=>{setPosts(postsList);});
+    }, []);
 
     //Filter posts that contains the exact characters of the input value
     function searchPosts(event) {
@@ -45,5 +34,6 @@ function PostsSection(props) {
         </section>
     );
 }
+
 
 export default PostsSection;

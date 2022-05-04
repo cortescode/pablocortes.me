@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore, collection, getDocs} from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,5 +20,23 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+
+const db = getFirestore(app);
+
+//Get blog posts from the firestore database
+export const getAllPosts = async () => {
+  const postsCollection = collection(db, 'Blog-posts');
+  const postsSnapshot = await getDocs(postsCollection, 'Posts');
+  const postsList = postsSnapshot.docs.map( (doc) => ({...doc.data(), id: doc.id}));
+  return postsList;
+}
+
+export const getAllPortfolioProjects = async () => {
+  const projectsCollection = collection(db, 'Blog-posts');
+  const projectsSnapshot = await getDocs(projectsCollection, 'Posts');
+  const projectsList = projectsSnapshot.docs.map( (doc) => ({...doc.data(), id: doc.id}));
+  return projectsList;
+}
 
 export default app;

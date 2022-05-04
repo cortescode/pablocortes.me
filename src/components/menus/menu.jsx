@@ -32,11 +32,6 @@ function Menu(props) {
                         Blog
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink to="/contact" className={({ isActive }) => isActive ? Style.activeLink : Style.link}>
-                        Contact
-                    </NavLink>
-                </li>
             </ul>
         </nav>
     );

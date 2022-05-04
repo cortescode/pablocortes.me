@@ -1,13 +1,12 @@
-
-
 .portfolioSlider {
     margin: 80 auto;
     display: grid;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 480px;
     /*grid-template: repeat(1, minmax(120px, 500px))/repeat(6, minmax(120px, 500px));*/
-    grid-template-areas: 'buttonPrevius notSelectedProject selectedProject notSelectedProject buttonNext';
+    grid-template-areas: 'buttonPrevius previousProject selectedProject nextProject buttonNext';
     justify-content: stretch;
+    align-items: center;
     gap: 20px;
 }
 
@@ -15,18 +14,27 @@
     border-radius: 16px;
 }
 
-.portfolioSlider .notSelectedProject {
+.portfolioSlider .nextProject {
     grid-area: "notSelectedProject";
-    background-color: antiquewhite;
     color: black;
 }
 .portfolioSlider .selectedProject {
-    grid-area: "selectedProject";
+    grid-area: "nextProject";
     padding: 20px;
     background-color: antiquewhite;
     color: black;
+    height: 100%;
+}
+.portfolioSlider .previousProject {
+    grid-area: "previousProject";
+    padding: 20px;
+    color: black;
 }
 
+.project_image {
+    max-width: 100%;
+    border-radius: 10px;
+}
 .portfolioSlider .buttonPrevious {
     grid-area: "puttonPrevious";
     background-color: antiquewhite;
