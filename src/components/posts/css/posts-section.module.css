@@ -1,7 +1,5 @@
 
-.blogPosts {
-    width: 60%;
-    max-width: 600px;
+.blogSection {
     color: var(--text-color);
   }
   

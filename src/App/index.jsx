@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Link, Routes } from 'react-router-dom';
 
-import Menu from "./components/menus/menu.jsx";
-import Home from "./Home.jsx";
-import Portfolio from "./Portfolio.jsx";
-import Blog from "./Blog.jsx";
+import Menu from "../components/menus/menu.jsx";
+import Home from "../Home/";
+import Portfolio from "../Portfolio";
+import Blog from "../Blog";
 import "./App.css";
 
 function App() {

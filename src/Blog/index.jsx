@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./components/headers/header.jsx";
-import PostsSection from "./components/posts/posts-section.jsx";
-import "./App.css";
+import Header from "../components/headers/header.jsx";
+import PostsSection from "../components/posts/posts-section.jsx";
+import "../App/App.css";
 
 function Blog() {
 

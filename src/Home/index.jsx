@@ -1,8 +1,10 @@
 import React from "react";
+import PortfolioSlider from "../components/portfolio/portfolio-slider.jsx";
+import Header from "../components/headers/header.jsx";
+import "../App/App.css";
+import { PortfolioProvider } from "../Portfolio/portfolioContext.js";
 
-import PortfolioSlider from "./components/portfolio/portfolio-slider.jsx";
-import Header from "./components/headers/header.jsx";
-import "./App.css";
+
 
 function Home() {
     return (
@@ -40,7 +42,9 @@ function Home() {
                     </div>
                 </section>
                 <h2>Portfolio</h2>
-                <PortfolioSlider></PortfolioSlider>
+                <PortfolioProvider>
+                    <PortfolioSlider></PortfolioSlider>
+                </PortfolioProvider>
             </main>
         </section>
     );

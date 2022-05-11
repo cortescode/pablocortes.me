@@ -16,6 +16,7 @@
 	position: sticky;
     top: 0;
     background: rgb(20, 20, 20, .96);
+    z-index: 50;
 }
 
 .textLogo{

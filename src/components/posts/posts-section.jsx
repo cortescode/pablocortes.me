@@ -2,28 +2,34 @@ import React, {useEffect, useState} from "react";
 import Style from "./css/posts-section.module.css";
 import PostAbstraction from "./post-abstraction.jsx";
 
-import {getAllPosts} from "../../firebase.js";
+import {getAllPosts} from "../../Firebase";
 
 function PostsSection(props) {
 
-    const [postsShown, setPosts] = useState([]);
+    const [posts, setPosts] = useState([]);
+    const [postsShown, setPostsShown] = useState([]);
 
     useEffect( ()=>{
-        getAllPosts().then((postsList)=>{setPosts(postsList);});
+        getAllPosts().then((postsList)=>{
+            setPosts(postsList); 
+            setPostsShown(postsList)
+        });
     }, []);
 
     //Filter posts that contains the exact characters of the input value
     function searchPosts(event) {
         const value = event.target.value;
-        const searchResponse = postsShown.filter(post => post.title.includes(value) || post.content.includes(value));
-        console.log(searchResponse);
-        setPosts(searchResponse);
+        const searchResponse = posts.filter(post => post.title.includes(value) || post.content.includes(value));
+        setPostsShown(searchResponse);
     }
 
     return (
-        <section className={Style.blogPosts}>
+        <section className={Style.blogSection}>
             <div className={Style.searchBarContainer}>
                 <input type="text" className={Style.searchBar} onChange={searchPosts}/>
+            </div>
+            <div className={Style.posts}>
+
             </div>
             {
                 postsShown.map( (post) => 
