@@ -5,6 +5,8 @@ import {PortfolioContext} from "../../Portfolio/portfolioContext.js";
 
 import { validateNumberIntoList } from "../../utils";
 
+import {ImArrowLeft, ImArrowRight} from "react-icons/im";
+
 
 function PortfolioSlider(props) {
 
@@ -18,7 +20,7 @@ function PortfolioSlider(props) {
 
     return(
         <section className={Style.portfolioSlider}>
-            <button className={Style.buttonPrevious} onClick={() => {changeSelectedProject("previous")}}> Anterior </button>
+            <button className={Style.buttonPrevious} onClick={() => {changeSelectedProject("previous")}}> <ImArrowLeft/> </button>
                 
             <div className={Style.previous}>
                 <img className={Style.project_image} src={ projects[validateNumberIntoList(selectedProject-1, projects)].imgUrl } alt="" />
@@ -38,7 +40,7 @@ function PortfolioSlider(props) {
                             <img className={Style.project_image} src={projects[validateNumberIntoList(selectedProject+1, projects)].imgUrl} alt="" />
             </div>
                 
-            <button className={Style.buttonNext} onClick={() => {changeSelectedProject("next")}}> Siguiente </button>
+            <button className={Style.buttonNext} onClick={() => {changeSelectedProject("next")}}> <ImArrowRight/> </button>
            
         </section>
     );

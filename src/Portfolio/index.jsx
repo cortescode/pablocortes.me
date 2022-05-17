@@ -1,10 +1,10 @@
 import React, {} from "react";
-import Header from '../components/headers/header.jsx';
+import Header from '../components/header/header.jsx';
 import PortfolioSlider from "../components/portfolio/portfolio-slider.jsx";
 import ProjectDetail from "../components/portfolio/project-detail.jsx";
+
 import {PortfolioProvider} from "./portfolioContext.js";
 import "../App/App.css";
-
 
 
 

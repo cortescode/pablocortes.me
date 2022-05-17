@@ -26,17 +26,16 @@ function PostsSection(props) {
     return (
         <section className={Style.blogSection}>
             <div className={Style.searchBarContainer}>
-                <input type="text" className={Style.searchBar} onChange={searchPosts}/>
+                <input type="text" className={Style.searchBar} onChange={searchPosts} content="Search"/>
             </div>
             <div className={Style.posts}>
-
-            </div>
             {
                 postsShown.map( (post) => 
                 {
                     return <PostAbstraction key={post.id} date="22 March, 2022" title={post.title} description={post.content}></PostAbstraction>
                 })
             }
+            </div>
         </section>
     );
 }

@@ -27,7 +27,7 @@ main {
   line-height: 1.4em;
   font-size: 16px;
   margin: 80px auto 80px auto;
-  max-width: 1000px;
+  max-width: 1400px;
 }
 
 main h2 {
@@ -36,19 +36,4 @@ main h2 {
   line-height: 1.2em;
   color:#FBA92C;
   margin-top: 100px;
-}
-
-.info {
-  display: flex;
-  justify-content: center;
-  
-}
-.info div {
-  margin: 20px;
-}
-.info a {
-  color:#AD8B4E;
-}
-.info div img {
-  max-width: 380px;
 }

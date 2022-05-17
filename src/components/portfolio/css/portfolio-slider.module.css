@@ -2,7 +2,7 @@
     margin: 80 auto;
     display: grid;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-rows: minmax(400px, 500px);
+    grid-template-rows: minmax(300px, 400px);
     /*grid-template: repeat(1, minmax(120px, 500px))/repeat(6, minmax(120px, 500px));*/
     grid-template-areas: 'buttonPrevius previousProject selectedProject nextProject buttonNext';
     justify-items: stretch;

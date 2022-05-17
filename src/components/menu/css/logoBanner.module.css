@@ -1,0 +1,21 @@
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #141414;
+    background: var(--yellow-color);
+}
+.textLogo{
+    display: flex;
+    align-items: center;
+
+    font: oblique 18px 900;
+}
+.textLogo a {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    color: #141414;
+
+}
